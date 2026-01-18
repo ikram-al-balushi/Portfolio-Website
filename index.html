@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Molana Muhammad Ikram | Portfolio</title>
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon.png">
+</head>
+
+<body>
+
+    {% if success %}
+    <div
+        style="background-color: #d1fae5; color: #064e3b; padding: 15px; text-align: center; position: fixed; top: 80px; width: 100%; z-index: 999;">
+        Thanks {{ name }}! Your message has been received (Logged in Backend Console).
+    </div>
+    {% endif %}
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Molana Muhammad Ikram</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section id="home" class="hero section">
+        <div class="container hero-content">
+            <h1>Molana Muhammad Ikram</h1>
+            <h2>Hafiz & Alim | Full-Stack Web Developer (Flask) | AI & ML Learner</h2>
+            <p>
+                Combining deep Islamic scholarship with modern technology. Experienced in Python Flask backend
+                development,
+                frontend design, and exploring Artificial Intelligence to solve real-world problems.
+            </p>
+            <div class="cta-buttons">
+                <a href="#projects" class="btn btn-primary">View Projects</a>
+                <a href="#contact" class="btn btn-secondary">Contact Me</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="section about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        I am a Hafiz-e-Quran and Alim from Jamia Binoria (Bunori Town) with a vision to bridge the gap
+                        between Deen and Technology.
+                        My journey bridges traditional Islamic sciences with cutting-edge software development.
+                    </p>
+                    <p>
+                        Beyond my religious education, I have dedicated myself to mastering Full-Stack Web Development,
+                        specifically specializing in Python and Flask backends.
+                        I am currently expanding my horizons into AI and Machine Learning, aiming to build intelligent
+                        systems that serve the public and aid in Islamic education.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature-item"><i class="fas fa-quran"></i> Hafiz-e-Quran</div>
+                        <div class="feature-item"><i class="fas fa-code"></i> Full-Stack Dev</div>
+                        <div class="feature-item"><i class="fas fa-brain"></i> AI Enthusiast</div>
+                        <div class="feature-item"><i class="fas fa-graduation-cap"></i> Islamic Scholar</div>
+                    </div>
+                </div>
+                <!-- Placeholder for Image or Abstract Visual -->
+                <div class="about-image"
+                    style="background-color: #e2e8f0; height: 300px; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #64748b;">
+                    <i class="fas fa-user-graduate fa-5x"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section id="education" class="section">
+        <div class="container">
+            <h2 class="section-title">Education & Certifications</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="content">
+                        <h3>Alim (Dars-e-Nizami)</h3>
+                        <p>Jamia Binoria, Bunori Town</p>
+                        <p><small>Detailed study of Islamic Jurisprudence, Arabic, and Theology.</small></p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="content">
+                        <h3>Hafiz-e-Quran</h3>
+                        <p>Complete memorization of the Holy Quran.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="content">
+                        <h3>Full-Stack Web Development</h3>
+                        <p>Certificate Course</p>
+                        <ul style="margin-left: 20px; font-size: 0.9em; margin-top: 10px;">
+                            <li>Frontend: HTML, CSS, JavaScript</li>
+                            <li>Backend: Python, Flask</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="content">
+                        <h3>Language Courses</h3>
+                        <p>Jamia Binoria / Other Institutes</p>
+                        <ul style="margin-left: 20px; font-size: 0.9em; margin-top: 10px;">
+                            <li>Arabic (Quranic/Religious)</li>
+                            <li>English (1 Year Course - Communication)</li>
+                            <li>Tajweed (1 Year Course)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="content">
+                        <h3>Machine Learning</h3>
+                        <p>Current Focus</p>
+                        <p><small>Studying ML fundamentals and Reinforcement Learning.</small></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3><i class="fas fa-laptop-code"></i> Frontend</h3>
+                    <ul class="skill-list">
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                        <li>JavaScript</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-server"></i> Backend</h3>
+                    <ul class="skill-list">
+                        <li>Python</li>
+                        <li>Flask (APIs, Routing)</li>
+                        <li>Logic Implementation</li>
+                        <li>Supabase & MongoDB</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-robot"></i> AI & ML</h3>
+                    <ul class="skill-list">
+                        <li>Basic Machine Learning</li>
+                        <li>Reinforcement Learning (Q-Learning)</li>
+                        <li>AI Chatbots</li>
+                        <li>OCR (Urdu/Arabic)</li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3><i class="fas fa-book-open"></i> Islamic & Other</h3>
+                    <ul class="skill-list">
+                        <li>Quran Recitation (Tajweed)</li>
+                        <li>Tafseer</li>
+                        <li>Git & GitHub</li>
+                        <li>Firebase</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <div class="projects-grid">
+
+                <!-- Main Highlight Project -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Gwadar City Application</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Python Flask</span>
+                            <span class="project-tag">Web Tech</span>
+                            <span class="project-tag">Public Service</span>
+                        </div>
+                        <p>A city-level public service application designed for cleanliness complaints, grievance
+                            handling, and municipal services management.</p>
+                        <br>
+                        <a href="https://play.google.com/store/apps/details?id=com.gwadarhelper.complaints&pcampaignid=web_share"
+                            class="btn btn-secondary" style="padding: 8px 20px; font-size: 0.9em;" target="_blank">View
+                            Details</a>
+                    </div>
+                </div>
+
+                <!-- Tafseer App -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Tafseer Application</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Under Development</span>
+                            <span class="project-tag">Islamic Tech</span>
+                        </div>
+                        <p>An ongoing development project aimed at making Quranic Tafseer accessible through modern
+                            digital interfaces.</p>
+                    </div>
+                </div>
+
+                <!-- Shop Management -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Shop Management Software</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Deployed</span>
+                            <span class="project-tag">Business Logic</span>
+                        </div>
+                        <p>A robust management solution currently deployed and successfully running in 4 retail shops
+                            for inventory and sales tracking.</p>
+                    </div>
+                </div>
+
+                <!-- Quran Platform -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Online Quran Learning</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">Education</span>
+                            <span class="project-tag">Platform</span>
+                        </div>
+                        <p>A platform facilitating distance learning for Quranic education, bridging students with
+                            qualified teachers.</p>
+                    </div>
+                </div>
+
+                <!-- AI Chatbot -->
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Urdu Islamic AI Chatbot</h3>
+                        <div class="project-tags">
+                            <span class="project-tag">AI / ML</span>
+                            <span class="project-tag">NLP</span>
+                        </div>
+                        <p>An intelligent chatbot designed to understand and respond to queries in Urdu with an Islamic
+                            context.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://github.com/ikram-al-balushi" target="_blank" class="btn btn-primary"><i
+                        class="fab fa-github"></i> View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Services Section -->
+    <section id="services" class="section">
+        <div class="container">
+            <h2 class="section-title">Experience & Services</h2>
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+                    <h3>Quran Teaching</h3>
+                    <p>Experienced in teaching Quran Online with proper Tajweed to students globally.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-code-branch"></i></div>
+                    <h3>Web Development</h3>
+                    <p>Building robust backends using Python Flask and responsive frontends for web applications.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-cogs"></i></div>
+                    <h3>AI & OCR Services</h3>
+                    <p>Training and evaluating AI models, specifically for Urdu language and OCR correction.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon"><i class="fas fa-magic"></i></div>
+                    <h3>AI Vibe Coding</h3>
+                    <p>Expertise in efficient "Vibe Coding" methodologies, leveraging utilizing advanced AI tools to
+                        accelerate development.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools" class="section" style="background-color: var(--bg-light);">
+        <div class="container">
+            <h2 class="section-title">Tools & Technologies</h2>
+            <div class="tools-grid">
+                <!-- Frontend -->
+                <div class="tool-badge">HTML5/CSS3</div>
+                <div class="tool-badge">JavaScript</div>
+
+                <!-- Backend & Logic -->
+                <div class="tool-badge">Python</div>
+                <div class="tool-badge">Flask</div>
+                <div class="tool-badge">API Integration</div>
+                <div class="tool-badge">Supabase</div>
+                <div class="tool-badge">MongoDB</div>
+                <div class="tool-badge">Database Management</div>
+
+                <!-- AI & Machine Learning -->
+                <div class="tool-badge">Machine Learning</div>
+                <div class="tool-badge">Q-Learning</div>
+
+                <!-- Infrastructure & Tools -->
+                <div class="tool-badge">Cloud Computing</div>
+                <div class="tool-badge">Networking System</div>
+                <div class="tool-badge">Firebase</div>
+                <div class="tool-badge">Git & GitHub</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Contact Me</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Get In Touch</h3>
+                    <p style="margin-bottom: 30px; color: var(--text-light);">
+                        Interested in collaboration or have a query? Feel free to reach out.
+                    </p>
+
+                    <div class="contact-info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>ikrambaloch112001@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Pakistan</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <i class="fab fa-github"></i>
+                        <div>
+                            <h4>GitHub</h4>
+                            <p><a href="https://github.com/ikram-al-balushi"
+                                    target="_blank">github.com/ikram-al-balushi</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <i class="fab fa-linkedin"></i>
+                        <div>
+                            <h4>LinkedIn</h4>
+                            <p><a href="https://www.linkedin.com/in/muhammad-ikram-b5a891399" target="_blank">View
+                                    Profile</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form action="{{ url_for('contact') }}" method="post">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <span class="footer-quote">"Seeking knowledge is a duty upon every Muslim."</span>
+            <div class="social-links">
+                <a href="https://github.com/ikram-al-balushi" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/muhammad-ikram-b5a891399" target="_blank"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="mailto:ikrambaloch112001@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+            <p>&copy; 2026 Molana Muhammad Ikram. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
